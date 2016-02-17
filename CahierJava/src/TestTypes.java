@@ -21,18 +21,18 @@ class TestTypes
 {
   public static void main(java.lang.String [] args)
   {
-    int année = 2003;
-    int annéeProchaine;
-    annéeProchaine = année + 1;
+    int annee = 2003;
+    int anneeProchaine;
+    anneeProchaine = annee + 1;
 
-    java.lang.String prénom;
-    prénom = "Thomas";
-    javax.swing.JOptionPane.showMessageDialog(null, prénom);
+    java.lang.String prenom;
+    prenom = "Thomas";
+    javax.swing.JOptionPane.showMessageDialog(null, prenom);
 
-    java.lang.String autrePrénom = "Sophie";
-    prénom = autrePrénom;
-    javax.swing.JOptionPane.showMessageDialog(null, prénom);
-    prénom = null;
+    java.lang.String autrePrenom = "Sophie";
+    prenom = autrePrenom;
+    javax.swing.JOptionPane.showMessageDialog(null, prenom);
+    prenom = null;
 
     javax.swing.JOptionPane.showMessageDialog(null, "1 \u20ac = 6.55957 FF");
   }
