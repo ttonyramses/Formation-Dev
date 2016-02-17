@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Fichier facture.xsd -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- Définition de l'élément facture de type Facture -->
+  <xsd:element name="facture" type="Facture"/>
+  
+  <!-- Définition du type d'élément Facture avec ses sous-éléments et attributs -->
+  <xsd:complexType name="Facture">
+    <xsd:sequence>
+      <xsd:element name="client" type="Client"/>
+      <xsd:element name="article" type="Article" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="date" type="xsd:date" use="required"/>
+    <xsd:attribute name="montant" type="Prix" use="required"/>
+    <xsd:attribute name="tva" type="Prix"/>
+  </xsd:complexType>
+  
+  <!-- Définition du type d'élément textuel Client avec son attribut -->
+  <xsd:complexType name="Client">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="nom" type="xsd:string" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  
+  <!-- Définition du type d'élément vide Article avec son attribut -->
+  <xsd:complexType name="Article">
+    <xsd:attribute name="description" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  
+  <!-- Définition du type d'élément restreint Prix -->
+  <xsd:simpleType name="Prix">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:minInclusive value="0"/>
+      <xsd:fractionDigits value="2"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

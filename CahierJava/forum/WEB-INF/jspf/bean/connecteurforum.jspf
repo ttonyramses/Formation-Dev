@@ -1,0 +1,42 @@
+<%--
+   Fichier WEB-INF/jspf/bean/connecteurforum.jspf
+
+   Les Cahiers du Programmeur Java - Copyright (C) 2003-2012 Emmanuel PUYBARET / eTeks <info@eteks.com>
+
+   This library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   This library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with this library; if not, write to the Free Software
+   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--%>
+<jsp:useBean id='connecteurForum' scope='application'
+             class='com.eteks.forum.ConnecteurForum' >
+  <jsp:setProperty name='connecteurForum'
+          property='driver' value='com.mysql.jdbc.Driver'/>
+  <jsp:setProperty name='connecteurForum'
+          property='chaineConnexion' value='jdbc:mysql:///test'/>
+  <jsp:setProperty name='connecteurForum'
+          property='login' value=''/>
+  <jsp:setProperty name='connecteurForum'
+          property='password' value=''/>
+  <%-- Ajout du moderateur du forum --%>
+  <jsp:useBean id='moderateur'
+               class='com.eteks.forum.UtilisateurForum' >
+    <jsp:setProperty name='moderateur'
+                     property='pseudonyme' value='moderateur'/>
+    <jsp:setProperty name='moderateur'
+                     property='motDePasse' value='azerty'/>
+    <jsp:setProperty name='moderateur' property='autorisation'
+          value='<%= com.eteks.forum.Autorisation.MODERATEUR %>'/>
+    <% if (!moderateur.rechercher(connecteurForum))
+         moderateur.ajouter(connecteurForum); %>
+  </jsp:useBean>
+</jsp:useBean>

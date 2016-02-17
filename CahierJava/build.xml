@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<project name="Test" basedir="." default="compile">
+  <target name="compile" description="Compilation">
+    <javac srcdir="src" destdir="classes">
+      <classpath>
+        <pathelement location="lib/servlet-api.jar"/>
+      </classpath>
+    </javac>
+  </target>
+</project>

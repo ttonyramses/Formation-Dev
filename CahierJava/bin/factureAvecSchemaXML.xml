@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<facture xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+     xsi:noNamespaceSchemaLocation="facture.xsd" 
+     date="2012-04-09" montant="20.80">
+  <client nom="Albert Dupont">
+    3, rue du pont
+    75001 PARIS
+  </client>
+  <article description="CDRx10"/>
+  <article description="Papier A4"/>
+</facture>

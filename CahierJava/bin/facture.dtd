@@ -1,0 +1,14 @@
+<!-- Fichier facture.dtd -->
+<!-- Un element facture doit contenir un element client suivi d'au moins un element article -->
+<!ELEMENT facture (client, article+)>
+<!-- Les attributs date et montant d'un element facture sont obligatoires,
+     l'attribut tva est optionnel -->
+<!ATTLIST facture date    CDATA #REQUIRED>
+<!ATTLIST facture montant CDATA #REQUIRED>
+<!ATTLIST facture tva     CDATA #IMPLIED>
+<!-- Un element client contient des données textuelles avec nom comme attribut obligatoire -->
+<!ELEMENT client (#PCDATA)>
+<!ATTLIST client nom CDATA #REQUIRED>
+<!-- Un element article est vide avec description comme attribut obligatoire -->
+<!ELEMENT article EMPTY>
+<!ATTLIST article description CDATA #REQUIRED>

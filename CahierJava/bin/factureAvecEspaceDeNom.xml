@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<gestion:facture date="2012-04-09" montant="20.80"
+                 xmlns:gestion="http://www.eteks.com/gestion"
+                 xmlns="http://www.w3.org/TR/REC-html40">
+  <gestion:client nom="Albert Dupont">
+    3, rue du pont<br/>
+    75001 <b>PARIS</b>
+  </gestion:client>
+  <gestion:article description="CDRx10"/>
+  <gestion:article description="Papier A4"/>
+</gestion:facture>

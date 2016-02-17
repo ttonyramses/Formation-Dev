@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<société nom="Ma Petite Entreprise" capital="10000">
+    <employé nom="Martin" prénom="Sophie" poste="Dirigeant">3, place de la Gare 95300 Pontoise</employé>
+    <employé nom="Durand" prénom="Thomas" poste="Programmeur">8, rue de Rennes 75006 Paris</employé>
+</société>

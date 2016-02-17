@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<utilisateurs>
+  <utilisateur pseudonyme="moderateur" autorisation="MODERATEUR" />
+  <utilisateur pseudonyme="Thomas"     autorisation="UTILISATEUR" />
+</utilisateurs>

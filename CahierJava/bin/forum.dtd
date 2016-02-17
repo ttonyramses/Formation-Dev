@@ -1,0 +1,25 @@
+<!-- Un élément utilisateurs contient un ensemble d'éléments utilisateur. -->
+<!ELEMENT utilisateurs (utilisateur*)>
+
+<!-- Un élément utilisateur est vide avec
+     pseudonyme comme attribut obligatoire,
+     motDePasse comme attribut optionnel, et
+     autorisation qui peut prendre pour valeur null, U ou M,
+     et null comme valeur par défaut. -->
+<!ELEMENT utilisateur EMPTY>
+<!ATTLIST utilisateur pseudonyme   CDATA #REQUIRED>
+<!ATTLIST utilisateur motDePasse   CDATA #IMPLIED>
+<!ATTLIST utilisateur autorisation (null|UTILISATEUR|MODERATEUR) "null">
+
+<!-- Un élément messages contient un ensemble d'éléments message. -->
+<!ELEMENT messages (message*)>
+
+<!-- Un élément message a des données textuelles décrivant son texte
+     avec auteur et dateCreation comme attributs obligatoires, et
+     sujet et id comme attributs optionnels. -->
+<!ELEMENT message (#PCDATA)>
+<!ATTLIST message auteur       CDATA #REQUIRED>
+<!ATTLIST message dateCreation CDATA #REQUIRED>
+<!ATTLIST message sujet        CDATA #IMPLIED>
+<!ATTLIST message id           CDATA #IMPLIED>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- Document factureAvecDTDExterne.xml -->
+<!DOCTYPE facture SYSTEM "./facture.dtd">
+<facture date="2012-04-09" montant="20.80">
+  <client nom="Albert Dupont">
+    3, rue du pont
+    75001 PARIS
+  </client>
+  <article description="CDRx10"/>
+  <article description="Papier A4"/>
+</facture>

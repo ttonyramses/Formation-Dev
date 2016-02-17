@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- Document factureInvalide.xml -->
+<!DOCTYPE facture SYSTEM "./facture.dtd">
+<facture montant="1500">
+  <client nom="Sophie Martin"/>
+  <article>PC
+</facture>
