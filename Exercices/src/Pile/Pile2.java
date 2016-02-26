@@ -3,14 +3,25 @@ package Pile;
 import java.util.List;
 import java.util.LinkedList;
 
+class Maillon {
+	  int donnee;
+	  Maillon suivant;
+
+	  Maillon(int donnee, Maillon suivant) {
+	      this.donnee = donnee;
+	      this.suivant = suivant;
+	    }
+}
+
 public class Pile2 implements Pile{
 
-	List<Integer> liste=new LinkedList<Integer>();
+	private Maillon debut;
 
+	
 	@Override
 	public void empiler(Integer n) {
-		liste.add(n);
 		
+		debut=new Maillon(n, debut);
 	}
 
 	@Override
@@ -19,13 +30,16 @@ public class Pile2 implements Pile{
 		if(estVide()){
 			throw new PileVideException();
 		}
+		int v=debut.donnee;
 		
-		return liste.remove(liste.size()-1);
+		debut=debut.suivant;
+		return v;
+		
 		
 	}
 	
 	public boolean estVide(){
-		return liste.size()==0;
+		return debut==null;
 	}
 
 }

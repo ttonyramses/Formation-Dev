@@ -8,7 +8,7 @@ import java.util.*;
 
 
 class ArdoisePile extends Box  {
-    Pile pile = new Pile3();
+    Pile pile = new Pile1();
     JTextField valeurAEmpiler = new JTextField(10);
     JLabel valeurDepilee = new JLabel("          ");
     JButton boutonEmpiler = new JButton("empiler");
