@@ -176,7 +176,16 @@ public class Liste {
 	
 	private boolean permutation(Maillon m){
 		
-		if(m.getSuivant()==null) return false;
+
+		
+		if(m.getPrecedent()==null){
+			this.debut=m;
+		}
+		
+		if(m.getSuivant()==null) {
+			this.fin=m;
+			return false;
+		}
 		
 		Maillon mp=m.getPrecedent();
 		Maillon ms=m.getSuivant();
