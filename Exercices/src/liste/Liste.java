@@ -28,7 +28,7 @@ public class Liste {
 		if(estVide()){
 			debut=fin=new Maillon(n,debut,fin);
 		}else{
-			fin=new Maillon(n,debut,null);
+			fin=new Maillon(n,fin,null);
 			fin.getPrecedent().setSuivant(fin);
 		}
 	}
@@ -38,11 +38,11 @@ public class Liste {
 	 */
 	public int taille() {
 		int t=0;
-		Maillon m=fin;
+		Maillon m=debut;
 		while(m!=null){
 			t++;
 			m=m.getSuivant();
-			
+
 		}
 		return t;
 	}
@@ -52,32 +52,94 @@ public class Liste {
 	 * elle renvoie false sinon.
 	 */
 	public boolean existe(int valeur) {
-		Maillon m=fin;
-		while(m!=null && m.getDonnee()!=valeur){
+		Maillon m=debut;
+		do{
 			if(m!=null && m.getDonnee()==valeur) return true;
 			m=m.getSuivant();
-		}
+		}while(m!=null);
 		return false;
 	}
 
 	/*
 	 * Si la liste est vide, la methode retirerPlusPetit envoie une exception de type VideException 
-         * (voir le fichier VideException.java fourni) ;
+	 * (voir le fichier VideException.java fourni) ;
 	 * si la liste n'est pas vide, elle retire le premier maillon de la liste
 	 * et renvoie la valeur contenue par le maillon supprime
 	 */
 	public int retirerPlusPetit() throws VideException {
-		return 0;
+
+		if(estVide()) throw new VideException();
+
+
+		Maillon m=debut;
+		int min=Integer.MIN_VALUE;
+
+		if(taille()==1){
+			min=debut.getDonnee();
+			debut=null;
+			fin=null;
+			return min;
+		}
+
+		try{
+			min=plusPetit();
+		}catch(VideException e){
+			System.out.println(e);
+		}
+
+		while(m!=null){
+			if(m.getDonnee()==min){
+				if(m.getPrecedent()==null){
+					debut=m.getSuivant();
+				}else{
+					m.getPrecedent().setSuivant(m.getSuivant());
+				}
+				
+				if(m.getSuivant()==null){
+					fin=m.getPrecedent();
+				}else{
+					m.getSuivant().setPrecedent(m.getPrecedent());
+				}
+					
+			}
+			if(m!=null)
+					m=m.getSuivant();
+		}
+		return min;
 	}
 
 	/*
 	 * Si la liste est vide, la methode plusGrand envoie une exception de type VideException ;
-         * (voir le fichier VideException.java fourni) ;
+	 * (voir le fichier VideException.java fourni) ;
 	 * si la liste n'est pas vide, elle renvoie la plus grande valeur de la liste ;
 	 * la methode ne supprime pas de maillon
 	 */
 	public int plusGrand() throws VideException {
-		return 0;
+		if(estVide()) throw new VideException();
+
+		int max=debut.getDonnee();
+		Maillon m=debut;
+		while(m!=null){
+			if(m.getDonnee()>max) max=m.getDonnee();
+			m=m.getSuivant();
+
+		}
+
+		return max;
+	}
+
+	public int plusPetit() throws VideException {
+		if(estVide()) throw new VideException();
+
+		int min=debut.getDonnee();
+		Maillon m=debut;
+		while(m!=null){
+			if(m.getDonnee()<min) min=m.getDonnee();
+			m=m.getSuivant();
+
+		}
+
+		return min;
 	}
 
 	/*
@@ -88,13 +150,13 @@ public class Liste {
 	public void ecrire() {
 		Maillon m=debut;
 		StringBuilder s=new StringBuilder();
-		
+
 		do{
-			
+
 			s.append(m.getDonnee()+" ");
 			m=m.getSuivant();
-		}while(m.getSuivant()!=null);
-		
+		}while(m!=null);
+
 		System.out.println("Contenu de la liste "+s);
 	}
 
@@ -104,13 +166,25 @@ public class Liste {
 	 * Par exemple, si la liste contient les entiers 2, 12, 17 et 25, la methode retourne :
 	 * Liste dans l'ordre decroissant : 25 17 12 2
 	 * Cette methode devra etre de complexite de l'ordre de la longueur de la liste et
-         * utilisera de preference une methode privee recursive.
+	 * utilisera de preference une methode privee recursive.
 	 */
 	public void ecrireDecroissant() {
-	}
-	
-	public boolean estVide() {
 		
+		Maillon m=fin;
+		StringBuilder s=new StringBuilder();
+
+		do{
+
+			s.append(m.getDonnee()+" ");
+			m=m.getPrecedent();
+		}while(m!=null);
+
+		System.out.println("Contenu de la liste "+s);
+
+	}
+
+	public boolean estVide() {
+
 		return debut==null && fin==null;
 	}
 
@@ -119,11 +193,22 @@ public class Liste {
 	 * Elle retourne un objet de type String decrivant la liste.
 	 * Par exemple, si la liste contient les entiers 2, 12, 17 et 25, la methode retourne :
 	 * Contenu de la liste : 2 12 17 25
-         * Cette methode utilisera la methode concat de la classe String
+	 * Cette methode utilisera la methode concat de la classe String
 	 */
 	@Override
 	public String toString() {
-		return null;
+
+		Maillon m=debut;
+		StringBuilder s=new StringBuilder();
+
+		do{
+
+			s.append(m.getDonnee()+" ");
+			m=m.getSuivant();
+		}while(m!=null);
+
+		return s.toString();
+
 	}
 }
 
