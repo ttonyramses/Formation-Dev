@@ -1,6 +1,6 @@
 package liste;
 
-public class Maillon  {
+public class Maillon  implements Comparable{
 	private int donnee;
 	private Maillon suivant;
 	private Maillon precedent;
@@ -32,5 +32,18 @@ public class Maillon  {
 	}
 	public void setDonnee(int donnee) {
 		this.donnee = donnee;
+	}
+
+	@Override
+	public int compareTo(Object arg0) {
+		
+		if( !(arg0 instanceof Maillon)){
+			try {
+				throw new Exception("Cet Objet n'est pas de type Maillon");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return this.donnee-((Maillon)arg0).donnee;
 	}
 }

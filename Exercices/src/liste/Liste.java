@@ -170,17 +170,37 @@ public class Liste {
 	 */
 	public void ecrireDecroissant() {
 		
-		Maillon m=fin;
-		StringBuilder s=new StringBuilder();
+		ordonnance();
+		ecrire();
+	}
+	
+	private boolean permutation(Maillon m){
+		
+		if(m.getSuivant()==null) return false;
+		
+		Maillon mp=m.getPrecedent();
+		Maillon ms=m.getSuivant();
+		
+		m.setSuivant(ms.getSuivant());
+		m.setPrecedent(ms);
+		ms.setSuivant(m);
+		ms.setPrecedent(mp);
+		if(mp!=null) mp.setSuivant(ms);
+		
+		return true;
+	}
+	
+	private void ordonnance(){
+		
+		Maillon m=debut;
 
 		do{
-
-			s.append(m.getDonnee()+" ");
-			m=m.getPrecedent();
+			if(m.getSuivant()!=null && m.compareTo(m.getSuivant())<0){
+				if(permutation(m))	ordonnance();
+			}
+			m=m.getSuivant();
 		}while(m!=null);
-
-		System.out.println("Contenu de la liste "+s);
-
+		
 	}
 
 	public boolean estVide() {
