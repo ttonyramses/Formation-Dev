@@ -174,28 +174,34 @@ public class Liste {
 		ecrire();
 	}
 	
-	private boolean permutation(Maillon m){
-		
+	private boolean permutation(Maillon m1){
 
-		
-		if(m.getPrecedent()==null){
-			this.debut=m;
-		}
-		
-		if(m.getSuivant()==null) {
-			this.fin=m;
-			return false;
-		}
-		
-		Maillon mp=m.getPrecedent();
-		Maillon ms=m.getSuivant();
-		
-		m.setSuivant(ms.getSuivant());
-		m.setPrecedent(ms);
-		ms.setSuivant(m);
-		ms.setPrecedent(mp);
-		if(mp!=null) mp.setSuivant(ms);
-		
+ 	if(m1==null||m1.getSuivant()==null) return false;
+ 	
+ 	Maillon mtp=(Maillon)m1.clone();
+ 	Maillon m2=m1.getSuivant(); 
+ 	
+ 	mtp.setDonnee(m1.getDonnee());
+ 	m1.setPrecedent(m2);
+ 	m1.setSuivant(m2.getSuivant());
+ 	
+ 	if(m2.getSuivant()!=null){
+ 		m2.getSuivant().setPrecedent(m1);
+ 	}else{
+ 		this.fin=m1;
+ 	}
+ 	
+ 	m2.setSuivant(m1);
+ 	m2.setPrecedent(mtp.getPrecedent());
+ 	
+ 	if(mtp.getPrecedent()!=null){
+ 		mtp.getPrecedent().setSuivant(m2);
+ 	}else{
+ 		debut=m2;
+ 	}
+ 	
+ 	
+
 		return true;
 	}
 	
