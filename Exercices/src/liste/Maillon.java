@@ -6,17 +6,24 @@ public class Maillon  implements Comparable{
 	private Maillon precedent;
 	
 	// Ajouter un constructeur
-	public Maillon(int donne, Maillon precedent, Maillon suivant){
-		this.donnee=donne;
+	public Maillon(int donnee, Maillon precedent, Maillon suivant){
+		this.donnee=donnee;
 		this.suivant=suivant;
 		this.precedent=precedent;
+	}
+	
+	public Maillon(int donnee, Maillon suivant){
+		this.donnee=donnee;
+		this.suivant=suivant;
 	}
 	
 	public Maillon getSuivant() {
 		return suivant;
 	}
+	
 	public void setSuivant(Maillon suivant) {
 		this.suivant = suivant;
+		if(suivant!=null) suivant.setPrecedent(this);
 	}
 	
 	public Maillon getPrecedent(){
@@ -45,5 +52,10 @@ public class Maillon  implements Comparable{
 			}
 		}
 		return this.donnee-((Maillon)arg0).donnee;
+	}
+	
+	@Override
+	public Object clone(){
+		return new Maillon(donnee, precedent, suivant);
 	}
 }
