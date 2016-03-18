@@ -49,10 +49,10 @@ public class Panneau extends JPanel {
 				
 				if(bi.getDistance(bj)<(bi.getDiametre()+bj.getDiametre())/2+pas){
 					
-					bi.setDirectX(bi.getX()>bj.getX());
-					bi.setDirectY(bi.getY()>bj.getY());
-					bj.setDirectX(bj.getX()>bi.getX());
-					bj.setDirectY(bj.getY()>bi.getY());
+					bi.setDirectX(bi.getXCentre()>bj.getXCentre());
+					bi.setDirectY(bi.getYCentre()>bj.getYCentre());
+					bj.setDirectX(bj.getXCentre()>bi.getXCentre());
+					bj.setDirectY(bj.getYCentre()>bi.getYCentre());
 				}
 			}
 		}
