@@ -26,12 +26,14 @@ public class Panneau extends JPanel {
 		boolean directY=Math.random()>0.5d?true:false;
 		Boule b=new Boule(x,y,diametre,color,directX, directY);
 		boules.add(b);
-		System.out.println(b);
 	}
 	
 	public void move(double pas){
 		for(Boule b: boules){
 			b.move(this.getWidth(), this.getHeight(), pas);
+			
+			//System.out.println(b+" pas="+pas+" width="+this.getWidth()+" height="+this.getHeight());
+
 		}
 	}
 	
@@ -46,8 +48,11 @@ public class Panneau extends JPanel {
 				bj=boules.get(j);
 				
 				if(bi.getDistance(bj)<(bi.getDiametre()+bj.getDiametre())/2+pas){
-					bi.directChange();
-					bj.directChange();
+					
+					bi.setDirectX(bi.getX()>bj.getX());
+					bi.setDirectY(bi.getY()>bj.getY());
+					bj.setDirectX(bj.getX()>bi.getX());
+					bj.setDirectY(bj.getY()>bi.getY());
 				}
 			}
 		}
@@ -63,7 +68,7 @@ public class Panneau extends JPanel {
 		
 		for(Boule b : boules){
 			Color cb=b.getCouleur();
-			Color cgr=new Color(cb.getRed(),0,cb.getBlue());
+			Color cgr=new Color(cb.getRed(),0,0);
 			
 			Color[] c={cb,cgr};
 			

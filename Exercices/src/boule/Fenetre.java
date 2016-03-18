@@ -1,9 +1,7 @@
 package boule;
 
-import java.awt.Color;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 
 public class Fenetre extends JFrame {
@@ -22,7 +20,8 @@ public class Fenetre extends JFrame {
 		this.setContentPane(pan);
 		this.setVisible(true);
 
-		go(5);
+		go((int)(3+Math.random()*(12-3)));
+		//go(10);
 	}
 
 
@@ -37,7 +36,7 @@ public class Fenetre extends JFrame {
 			pan.repaint();
 			
 			try {
-				Thread.sleep(5);
+				Thread.sleep((long)(2+Math.random()*(15-2)));
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

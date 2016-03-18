@@ -114,9 +114,5 @@ public class Boule {
 		
 	}
 	
-	public void directChange(){
-		directX=!directX;
-		directY=!directY;
-	}
 
 }
