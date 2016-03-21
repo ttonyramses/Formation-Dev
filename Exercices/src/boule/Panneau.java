@@ -17,15 +17,22 @@ public class Panneau extends JPanel {
 	private List<Boule> boules=new ArrayList<Boule>();
 	
 	
-	public void addBoule(){
+	public boolean addBoule(){
 		Color color =new Color((int)(Math.random()*255), (int)(Math.random()*255),(int)(Math.random()*255));
 		double x=Math.random()*this.getWidth();
 		double y=Math.random()*this.getHeight();
-		double diametre=30+Math.random()*(100-30);
+		double diametre=30+Math.random()*(80-40);
 		boolean directX=Math.random()>0.5d?true:false;
 		boolean directY=Math.random()>0.5d?true:false;
 		Boule b=new Boule(x,y,diametre,color,directX, directY);
-		boules.add(b);
+		return boules.add(b);
+	}
+	
+	public Boule delBoule(){
+		if(boules.size()>0)
+			return boules.remove((int)(Math.random()*(boules.size()-1)));
+		else
+			return null;
 	}
 	
 	public void move(double pas){
