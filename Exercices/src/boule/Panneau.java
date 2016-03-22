@@ -68,9 +68,9 @@ public class Panneau extends JPanel {
 	
 	public void paintComponent(Graphics gr){
 		Graphics2D g=(Graphics2D)gr;
-				
-		g.setColor(Color.white);
-		g.fillRect(0, 0, this.getWidth(), this.getHeight());
+		super.paintComponent(g);		
+		//g.setColor(Color.white);
+		//g.fillRect(0, 0, this.getWidth(), this.getHeight());
 		float[] f={0.01f,0.5f};
 		
 		for(Boule b : boules){
