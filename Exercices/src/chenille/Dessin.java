@@ -64,7 +64,7 @@ public class Dessin extends JPanel {
 			// fixe le dessin associé au visage rond v : c'est CE dessin
 			c.setDessin(this);
 			// le dessin se réaffiche
-			repaint();
+			//repaint();
 		}
 	}
 	
