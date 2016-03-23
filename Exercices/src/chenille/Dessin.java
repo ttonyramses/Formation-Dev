@@ -4,6 +4,8 @@ import java.awt.Graphics;
 
 import javax.swing.JPanel;
 
+import java.awt.Color;
+
 /**
  * Dessin.java
  */
@@ -90,15 +92,63 @@ public class Dessin extends JPanel {
 	 * @param g le contexte graphique
 	 */
 	public void paintComponent(Graphics g) {
+		g.setColor(Color.WHITE);
 		super.paintComponent(g);
 
 		for (Chenille c : listeChenilles)
 			c.dessiner(g);
+		
+		for (Salade s : listeSalades)
+			s.dessiner(g);
 	}
 
 	public void deplacer(){
 		for (Chenille c : listeChenilles)
 			c.deplacer();
+	}
+	
+	public void mangerSalade(){
+		for(Chenille c :listeChenilles){
+			for(Salade s:listeSalades){
+				if(c.getTete().getDistance(s)<2*Anneau.R){
+					c.ajoutAnneau();
+					listeSalades.remove(s);
+					break;
+				}
+			}
+		}
+	}
+	
+	public void toucherLesAutres(){
+
+		Tete ti,tj;
+		
+		for(Chenille ci:listeChenilles){
+			
+			ti=ci.getTete();
+			for(Chenille cj:listeChenilles){
+				if(ci.equals(cj)) {
+					continue;
+				}
+				tj=cj.getTete();
+				
+				//cas de colision de tête entre deux chenille
+				if(ti.getDistance(tj)<2*Tete.R+Tete.R/2){
+					ti.capOpposer(tj);
+					tj.capOpposer(ti);
+					continue;
+				}
+				
+				//cas ou la tête d'une chenille est proche de l'anneau d'une autre chenille
+				for(Anneau a : cj.getAnneaux()){
+					if(ti.getDistance(a)<Anneau.R*2){
+						cj.enleverAnneau();
+						break;
+					}
+				}
+			}
+		}
+		
 	}
 
 }

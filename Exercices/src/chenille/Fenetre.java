@@ -20,8 +20,8 @@ public class Fenetre extends JFrame {
 		this.setContentPane(des);
 		this.setVisible(true);
 		
-		for(int i=0;i<5;i++){
-		des.ajouterObjet(new Chenille(new Color(100+(int)(Math.random()*150),(int)(Math.random()*255),(int)(Math.random()*255)), des,10));
+		for(int i=0;i<3;i++){
+			des.ajouterObjet(new Chenille(new Color(100+(int)(Math.random()*150),(int)(Math.random()*255),(int)(Math.random()*255)), des,3));
 		}
 
 		animation();
@@ -35,10 +35,13 @@ public class Fenetre extends JFrame {
 			
 			des.pause(pause);
 			des.deplacer();
-			
+			des.mangerSalade();
+			if(time>2*newSaladeTime){
+				des.toucherLesAutres();
+			}
 			time+=pause;
-			if(time%2000==0){
-				des.ajouterObjet(new Salade());
+			if(time%newSaladeTime==0){
+				des.ajouterObjet(new Salade((int)(2*Salade.R+Math.random()*(des.getWidth()-4*Salade.R)),(int)(2*Salade.R+Math.random()*(des.getHeight()-4*Salade.R)),Color.GREEN));
 			}
 			des.repaint();
 		}

@@ -6,17 +6,16 @@ public class Anneau {
 
 	protected int x;
 	protected int y;
-	public static int r=5;
+	public static final int R=20;
 	/**
 	 * crée un Anneau en fixant sa position initiale et son rayon
 	 * @param xInit abscisse du centre de l'anneau
 	 * @param yInit ordonnée du centre de l'anneau
 	 * @param r rayon de l'anneau
 	 */
-	public Anneau(int xInit, int yInit, int r){
+	public Anneau(int xInit, int yInit){
 		this.x=xInit;
 		this.y=yInit;
-		this.r=r;
 	}
 
 	/**
@@ -40,13 +39,11 @@ public class Anneau {
 	 * @param py ordonnée du point
 	 */
 	public void placerA(int px, int py){
-		x=px-r;
-		y=py-r;
+		x=px;
+		y=py;
 	}
 	
-	public int getR(){
-		return r;
-	}
+
 
 	/**
 	 * affiche l'anneau en le matérialisant par un cercle noir
@@ -54,12 +51,16 @@ public class Anneau {
 	 * de l'affichage dans la fenêtre de dessin
 	 */
 	public void dessiner(Graphics g){
-		g.drawOval(x, y, r*2, r*2);
+		g.drawOval(x-R, y-R, R*2, R*2);
+	}
+	
+	public double getDistance(Anneau a){
+		return Math.sqrt(Math.pow(x-a.getX(), 2)+Math.pow(y-a.getY(), 2));
 	}
 
 	@Override
 	public String toString() {
-		return "Anneau [x=" + x + ", y=" + y + ", r=" + r + "]";
+		return "Anneau [x=" + x + ", y=" + y + ", R=" + R + "]";
 	}
 	
 	
