@@ -50,10 +50,8 @@ public class Chenille {
 //		}
 		if(!tete.capOk(d.getLargeur(), d.getHauteur())){
 
-			System.out.println("cap not ok "+tete);
 			tete.capOpposer(d.getLargeur(), d.getHauteur());
 			tete.deplacerSelonCap();
-			System.out.println("Opposer cap "+tete);
 			
 //			while(!tete.capOk(d.getLargeur(), d.getHauteur())){
 //				System.out.println(tete);
