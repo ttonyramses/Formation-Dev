@@ -1,0 +1,123 @@
+2016-07-21 12:19:02,963 INFO main fr.afcepf.al28.tp4.ConsoleAppTp4 - Nombre de personne dans l'avion : 3
+2016-07-21 12:19:02,992 INFO main fr.afcepf.al28.tp4.ConsoleAppTp4 - Nombre de personne dans l'avion : 4
+2016-07-21 12:19:03,439 INFO main fr.afcepf.al28.tp4.ConsoleAppTp4 - Nombre de personne dans l'avion : 0
+2016-07-21 14:03:17,276 INFO main fr.afcepf.al28.tp5.ConsoleAppTp5 - Nombre de personne dans l'avion : 5
+2016-07-21 14:03:17,281 INFO main fr.afcepf.al28.tp5.ConsoleAppTp5 - Nombre de personne dans l'avion : 6
+2016-07-21 14:03:17,616 INFO main fr.afcepf.al28.tp5.ConsoleAppTp5 - Nombre de personne dans l'avion : 0
+2016-07-21 14:03:51,313 INFO main fr.afcepf.al28.tp5.ConsoleAppTp5 - Nombre de personne dans l'avion : 5
+2016-07-21 14:03:51,320 INFO main fr.afcepf.al28.tp5.ConsoleAppTp5 - Nombre de personne dans l'avion : 6
+2016-07-21 14:03:51,636 INFO main fr.afcepf.al28.tp5.ConsoleAppTp5 - Nombre de personne dans l'avion : 0
+2016-07-21 14:08:37,491 INFO main fr.afcepf.al28.tp5.ConsoleAppTp5 - Nombre de personne dans l'avion : 5
+2016-07-21 14:08:37,496 INFO main fr.afcepf.al28.tp5.ConsoleAppTp5 - Nombre de personne dans l'avion : 6
+2016-07-21 14:08:37,835 INFO main fr.afcepf.al28.tp5.ConsoleAppTp5 - Nombre de personne dans l'avion : 0
+2016-07-21 15:19:20,318 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 3
+2016-07-21 15:19:20,332 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 4
+2016-07-21 15:19:20,650 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 0
+2016-07-21 15:21:09,429 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 3
+2016-07-21 15:21:09,434 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 4
+2016-07-21 15:21:09,436 INFO main fr.afcepf.al28.tp6.Personne - Personne [nom=Personne-0, age=20, poids=50.2]
+2016-07-21 15:21:09,439 INFO main fr.afcepf.al28.tp6.Personne - Employe [nom=Employe1, age=21, poids=50.2, salaire=750.55€]
+2016-07-21 15:21:09,439 INFO main fr.afcepf.al28.tp6.Personne - Personne [nom=Personne-2, age=22, poids=50.2]
+2016-07-21 15:21:09,453 INFO main fr.afcepf.al28.tp6.Personne - Personne [nom=Moi meme, age=25, poids=75.5]
+2016-07-21 15:21:09,768 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 0
+2016-07-21 15:24:14,007 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 2
+2016-07-21 15:24:14,012 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 3
+2016-07-21 15:24:14,015 INFO main fr.afcepf.al28.tp6.Personne - Personne [nom=Personne-0, age=20, poids=50.2]
+2016-07-21 15:24:14,018 INFO main fr.afcepf.al28.tp6.Personne - Employe [nom=Employe1, age=21, poids=50.2, salaire=750.55€]
+2016-07-21 15:24:14,018 INFO main fr.afcepf.al28.tp6.Personne - Personne [nom=Moi meme, age=25, poids=75.5]
+2016-07-21 15:24:14,334 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 0
+2016-07-21 15:24:14,335 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Racine carré de 81 : 9.0
+2016-07-21 15:24:53,281 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 4
+2016-07-21 15:24:53,286 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 5
+2016-07-21 15:24:53,289 INFO main fr.afcepf.al28.tp6.Personne - Personne [nom=Personne-0, age=20, poids=50.2]
+2016-07-21 15:24:53,291 INFO main fr.afcepf.al28.tp6.Personne - Employe [nom=Employe1, age=21, poids=50.2, salaire=750.55€]
+2016-07-21 15:24:53,291 INFO main fr.afcepf.al28.tp6.Personne - Personne [nom=Personne-2, age=22, poids=50.2]
+2016-07-21 15:24:53,294 INFO main fr.afcepf.al28.tp6.Personne - Employe [nom=Employe3, age=23, poids=50.2, salaire=2251.6499999999996€]
+2016-07-21 15:24:53,294 INFO main fr.afcepf.al28.tp6.Personne - Personne [nom=Moi meme, age=25, poids=75.5]
+2016-07-21 15:24:53,294 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Mon appareil volant a un planfond de : 10000
+2016-07-21 15:24:53,609 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 0
+2016-07-21 15:24:53,610 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Racine carré de 81 : 9.0
+2016-07-21 15:32:52,208 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 3
+2016-07-21 15:32:52,215 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 4
+2016-07-21 15:32:52,218 INFO main fr.afcepf.al28.tp6.Personne - Personne [nom=Personne-0, age=20, poids=50.2]
+2016-07-21 15:32:52,222 INFO main fr.afcepf.al28.tp6.Personne - Employe [nom=Employe1, age=21, poids=50.2, salaire=750.55€]
+2016-07-21 15:32:52,222 INFO main fr.afcepf.al28.tp6.Personne - Personne [nom=Personne-2, age=22, poids=50.2]
+2016-07-21 15:32:52,226 INFO main fr.afcepf.al28.tp6.Personne - Personne [nom=Moi meme, age=25, poids=75.5]
+2016-07-21 15:32:52,227 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Mon appareil volant a un planfond de : 10000
+2016-07-21 15:32:52,227 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Mon appareil volant a une couleur : blanc
+2016-07-21 15:32:52,541 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Nombre de personne dans l'avion : 0
+2016-07-21 15:32:52,541 INFO main fr.afcepf.al28.tp6.ConsoleAppTp6 - Racine carré de 81 : 9.0
+2016-07-21 15:49:54,592 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 3
+2016-07-21 15:49:54,597 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 4
+2016-07-21 15:49:54,601 INFO main fr.afcepf.al28.tp7.Personne - Personne [nom=Personne-0, age=20, poids=50.2]
+2016-07-21 15:49:54,604 INFO main fr.afcepf.al28.tp7.Personne - Employe [nom=Employe1, age=21, poids=50.2, salaire=750.55€]
+2016-07-21 15:49:54,604 INFO main fr.afcepf.al28.tp7.Personne - Personne [nom=Personne-2, age=22, poids=50.2]
+2016-07-21 15:49:54,607 INFO main fr.afcepf.al28.tp7.Personne - Personne [nom=Moi meme, age=25, poids=75.5]
+2016-07-21 15:49:54,607 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a un planfond de : 10000
+2016-07-21 15:49:54,607 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a une couleur : blanc
+2016-07-21 15:49:54,921 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 0
+2016-07-21 15:49:54,921 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Racine carré de 81 : 9.0
+2016-07-21 16:14:20,832 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 5
+2016-07-21 16:14:20,837 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 6
+2016-07-21 16:14:20,839 INFO main fr.afcepf.al28.tp7.Personne - Personne [nom=Personne-0, age=20, poids=50.2]
+2016-07-21 16:14:20,842 INFO main fr.afcepf.al28.tp7.Personne - Employe [nom=Employe1, age=21, poids=50.2, salaire=750.55€]
+2016-07-21 16:14:20,842 INFO main fr.afcepf.al28.tp7.Personne - Personne [nom=Personne-2, age=22, poids=50.2]
+2016-07-21 16:14:20,845 INFO main fr.afcepf.al28.tp7.Personne - Employe [nom=Employe3, age=23, poids=50.2, salaire=2251.6499999999996€]
+2016-07-21 16:14:20,845 INFO main fr.afcepf.al28.tp7.Personne - Personne [nom=Personne-4, age=24, poids=50.2]
+2016-07-21 16:14:20,846 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a un planfond de : 10000
+2016-07-21 16:14:20,846 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a une couleur : blanc
+2016-07-21 16:14:21,160 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 0
+2016-07-21 16:14:21,160 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Racine carré de 81 : 9.0
+2016-07-21 16:14:58,316 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 5
+2016-07-21 16:14:58,321 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 6
+2016-07-21 16:14:58,324 INFO main fr.afcepf.al28.tp7.Personne - Personne [nom=Personne-0, age=20, poids=50.2]
+2016-07-21 16:14:58,327 INFO main fr.afcepf.al28.tp7.Personne - Employe [nom=Employe1, age=21, poids=50.2, salaire=750.55€]
+2016-07-21 16:14:58,327 INFO main fr.afcepf.al28.tp7.Personne - Personne [nom=Personne-2, age=22, poids=50.2]
+2016-07-21 16:14:58,331 INFO main fr.afcepf.al28.tp7.Personne - Employe [nom=Employe3, age=23, poids=50.2, salaire=2251.6499999999996€]
+2016-07-21 16:14:58,331 INFO main fr.afcepf.al28.tp7.Personne - Personne [nom=Personne-4, age=24, poids=50.2]
+2016-07-21 16:14:58,331 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a un planfond de : 10000
+2016-07-21 16:14:58,331 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a une couleur : blanc
+2016-07-21 16:14:58,645 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 0
+2016-07-21 16:14:58,646 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Racine carré de 81 : 9.0
+2016-07-21 16:15:43,736 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 4
+2016-07-21 16:15:43,741 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 5
+2016-07-21 16:15:43,746 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a un planfond de : 10000
+2016-07-21 16:15:43,746 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a une couleur : blanc
+2016-07-21 16:15:44,060 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 0
+2016-07-21 16:15:44,060 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Racine carré de 81 : 9.0
+2016-07-21 16:18:17,329 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 7
+2016-07-21 16:18:17,335 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 8
+2016-07-21 16:18:17,340 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a un planfond de : 10000
+2016-07-21 16:18:17,341 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a une couleur : blanc
+2016-07-21 16:18:17,655 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 0
+2016-07-21 16:18:17,655 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Racine carré de 81 : 9.0
+2016-07-21 16:25:48,156 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 2
+2016-07-21 16:25:48,161 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 3
+2016-07-21 16:25:48,166 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a un planfond de : 10000
+2016-07-21 16:25:48,166 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a une couleur : blanc
+2016-07-21 16:25:48,480 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 0
+2016-07-21 16:25:48,480 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Racine carré de 81 : 9.0
+2016-07-21 16:28:49,259 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 6
+2016-07-21 16:28:49,264 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 7
+2016-07-21 16:28:49,270 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a un planfond de : 10000
+2016-07-21 16:28:49,270 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a une couleur : blanc
+2016-07-21 16:28:49,584 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 0
+2016-07-21 16:28:49,584 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Racine carré de 81 : 9.0
+2016-07-21 16:30:06,507 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 3
+2016-07-21 16:30:06,513 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 4
+2016-07-21 16:30:06,519 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a un planfond de : 10000
+2016-07-21 16:30:06,519 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Mon appareil volant a une couleur : blanc
+2016-07-21 16:30:06,834 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Nombre de personne dans l'avion : 0
+2016-07-21 16:30:06,834 INFO main fr.afcepf.al28.tp7.ConsoleAppTp7 - Racine carré de 81 : 9.0
+2016-07-22 11:41:43,349 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Nombre de personne dans l'avion : 4
+2016-07-22 11:41:43,398 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Nombre de personne dans l'avion : 5
+2016-07-22 11:41:43,434 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Mon appareil volant a un planfond de : 10000
+2016-07-22 11:41:43,435 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Mon appareil volant a une couleur : blanc
+2016-07-22 11:41:43,826 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Nombre de personne dans l'avion : 0
+2016-07-22 11:41:43,826 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Racine carré de 81 : 9.0
+2016-07-22 13:29:33,855 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Nombre de personne dans l'avion : 4
+2016-07-22 13:29:33,906 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Nombre de personne dans l'avion : 5
+2016-07-22 13:29:33,940 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Mon appareil volant a un planfond de : 10000
+2016-07-22 13:29:33,940 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Mon appareil volant a une couleur : blanc
+2016-07-22 13:29:34,322 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Nombre de personne dans l'avion : 0
+2016-07-22 13:29:34,322 INFO main fr.afcepf.al28.tp9.ConsoleAppTp9 - Racine carré de 81 : 9.0
