@@ -1,23 +1,22 @@
-<%@page contentType="text/html; charset=UTF-8" %>
+<%@page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>paramEmprunt</title>
 </head>
-<body>
-	<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
+<jsp:include page="header.jsp"></jsp:include>
+<%! int compteur=0; %>
 <body>
 	</br>
 	</br>
 	</br>
 	<h2>Formulaire Emprunt</h2>
 	<%
+	
+	synchronized(this){
+		compteur++;
+	}
 		double mensualite = 0.0, montant = 0.0, taux = 0.0;
 		int duree = 0;
 		String sMontant = request.getParameter("montant");
@@ -33,7 +32,7 @@
 		}
 	%>
 	<%="sMontant="+sMontant+" sDuree="+sDuree+" sTaux="+sTaux%>
-	
+
 	<form method="get">
 		<table>
 			<tr>
@@ -52,6 +51,7 @@
 				<td colspan="2"><input value="Calucler mensualité"
 					type="submit" /></td>
 			</tr>
+
 		</table>
 	</form>
 
@@ -59,6 +59,8 @@
 
 	Mensualite=
 	<b><%=mensualite %> €</b>
+	<br /> Compteur =
+	<b><%=compteur %></b>
 </body>
 </html>
 </body>
