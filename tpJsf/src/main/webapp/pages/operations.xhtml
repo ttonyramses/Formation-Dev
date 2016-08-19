@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<ui:composition template="/templates/common.xhtml">
+	<ui:define name="pageMetaData">
+	<f:metadata>
+		<f:viewParam name="numCmpt" value="#{operationMBean.numCmpt}"></f:viewParam>
+		<f:event type="preRenderView" listener="#{operationMBean.initOperations}"/>
+	</f:metadata>
+	</ui:define>
+	<ui:define name="pageTitle">Operation Compte</ui:define>
+	<ui:define name="pageHeader">** Operations Comptes **</ui:define>
+	<ui:define name="body">
+
+		<h:form>
+		<h:dataTable rendered="#{not empty operationMBean.operations}"
+			value="#{operationMBean.operations}" var="o" border="1">
+
+			<h:column>
+				<f:facet name="header">
+					<f:verbatim>label</f:verbatim>
+				</f:facet>
+				<h:outputText value="#{o.label}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<f:verbatim>Montant</f:verbatim>
+				</f:facet>
+				<h:outputText value="#{o.montant}" />
+			</h:column>
+
+		</h:dataTable>
+		<hr/>
+		<h:outputLink value="espaceClient.jsf">Espace Client</h:outputLink>
+		</h:form>
+		
+		
+		<br/>
+<!-- <h:selectOneMenu value="Selectionne un compte">
+		<f:selectItems value="#{clientMBean.comptes}" var="compte"
+			itemValue="#{compte.numero}" itemLabel="#{compte.label}" />
+</h:selectOneMenu> -->
+
+<!-- <h:outputLink  value="virementCompte.jsf">Effectuer un virement</h:outputLink> -->
+
+	</ui:define>
+</ui:composition>
+
+</html>

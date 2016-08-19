@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<ui:composition template="/templates/common.xhtml">
+	<ui:define name="pageTitle">Virement  Compte</ui:define>
+	<ui:define name="pageHeader">** Virement Compte **</ui:define>
+	<ui:define name="body">
+	<h:messages showDetail="true"/>
+	<h:form>
+		<table>
+
+			<tr>
+				<td>Compte Expediteur</td>
+				<td><h:selectOneMenu value="${virementMBean.cptExpNumero}">
+		<f:selectItems value="#{virementMBean.clientMBean.comptes}" var="compte"
+			itemValue="#{compte.numero}" itemLabel="#{compte.label}" />
+</h:selectOneMenu></td>
+			</tr>
+			<tr>
+				<td>Compte Destinataire</td>
+				<td><h:selectOneMenu value="${virementMBean.cptDestNumero}">
+		<f:selectItems value="#{virementMBean.clientMBean.comptes}" var="compte"
+			itemValue="#{compte.numero}" itemLabel="#{compte.label}" />
+</h:selectOneMenu></td>
+			</tr>
+			<tr>
+				<td>montant</td>
+				<td><h:inputText value="#{virementMBean.montant}" /></td>
+			</tr>
+		</table> <br/>
+
+		
+			<h:commandButton action="#{virementMBean.effectuerVirement()}"
+				value="effectuer le viremment" />
+		</h:form>
+
+			<h:outputLink value="espaceClient.jsf">Espace Client</h:outputLink>
+	
+
+	</ui:define>
+</ui:composition>
+
+</html>

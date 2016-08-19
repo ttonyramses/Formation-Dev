@@ -14,7 +14,6 @@ import fr.afcepf.al28.data.Compte;
 
 @ManagedBean
 @SessionScoped
-//@RequestScoped
 public class ClientMBean { 
 
 	private Long numero;
@@ -72,8 +71,8 @@ public class ClientMBean {
 		
 		comptes=new ArrayList(0);
 		comptes.add(new Compte(1245l,"Courant",1235.5));
-		comptes.add(new Compte(5246l,"Compte Livret A", 5500.50));
-		comptes.add(new Compte(7564l,"Compte PEL", 15000.80));
+		comptes.add(new Compte(5246l,"Livret A", 5500.50));
+		comptes.add(new Compte(7564l,"PEL", 15000.80));
 		return suite;
 		
 	}

@@ -48,5 +48,23 @@ public class Compte {
 		return "Compte [numero=" + numero + ", label=" + label + ", solde=" + solde + "]";
 	}
 
+	@Override
+	public boolean equals(Object o){
+		
+		if(!(o instanceof Compte)){
+			return false;
+		}else{
+			
+			if(numero!=null && numero.equals(((Compte)o).getNumero())){
+				return true;
+			}else{
+				return false;
+			}
+			
+		}
+		
+		
+		
+	}
 
 }

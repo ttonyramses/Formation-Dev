@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<ui:composition template="/templates/common.xhtml">
+	<ui:define name="pageTitle">Test Prime Faces</ui:define>
+	<ui:define name="pageHeader">** Test Prime Faces **</ui:define>
+	<ui:define name="body">
+		<p:tabView id="tabViewXy">
+			<p:tab title="Line Chart">
+				<p:chart type="line" model="#{chartView.animatedModel1}"
+					style="width:400px;" />
+			</p:tab>
+			<p:tab title="Bar Chart">
+				<p:chart type="bar" model="#{chartView.animatedModel2}"
+					style="width:400px;" />
+
+			</p:tab>
+			<p:tab title="Calendar">
+				<h:form>
+					<p:calendar id="date" value="#{generalMBean.date}" />
+				</h:form>
+
+			</p:tab>
+			<p:tab title="Pays">
+				<h:form>
+					<p:autoComplete completeMethod="#{generalMBean.completePays}"
+value="#{generalMBean.pays}" />
+				</h:form>
+
+			</p:tab>
+		</p:tabView>
+	</ui:define>
+</ui:composition>
+
+</html>

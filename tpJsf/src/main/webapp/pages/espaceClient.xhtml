@@ -9,6 +9,7 @@
 		with actual data.
 	 -->
 <ui:composition template="/templates/common.xhtml">
+
 	<ui:define name="pageTitle">Espace Client</ui:define>
 	<ui:define name="pageHeader">** Espace Client **</ui:define>
 	<ui:define name="body">
@@ -35,32 +36,78 @@
 		<h:form>
 			<h:commandButton action="${clientMBean.recupererComptes()}"
 				value="liste Comptes" />
-		</h:form>
 
-		<h:dataTable rendered="#{not empty clientMBean.comptes}"
-			value="#{clientMBean.comptes}" var="compte" border="1">
+
+			<h:dataTable rendered="#{not empty clientMBean.comptes}"
+				value="#{clientMBean.comptes}" var="compte" border="1">
+
+				<h:column>
+					<f:facet name="header">
+						<f:verbatim>numero </f:verbatim>
+					</f:facet>
+					<!-- <h:outputText value="#{compte.numero}" /> -->
+					<h:commandLink action="#{operationMBean.recupererOperation()}"
+						value="#{compte.numero}">
+						<f:setPropertyActionListener value="#{compte.numero}"
+							target="#{operationMBean.numCmpt}" />
+
+					</h:commandLink>
+
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<f:verbatim>Numero Get</f:verbatim>
+					</f:facet>
+					<h:outputLink value="operations.jsf?numCmpt=#{compte.numero}">#{compte.numero}</h:outputLink>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<f:verbatim>Solde</f:verbatim>
+					</f:facet>
+					<h:outputText value="#{compte.solde}" />
+				</h:column>
+			</h:dataTable>
+		
+		<hr />
+		<!-- <h:selectOneMenu value="Selectionne un compte">
+		<f:selectItems value="#{clientMBean.comptes}" var="compte"
+			itemValue="#{compte.numero}" itemLabel="#{compte.label}" />
+</h:selectOneMenu> -->
+
+		<h:outputLink value="virementCompte.jsf">Effectuer un virement</h:outputLink>
+
+		<hr />
+		****<br />****<br />****<br />****<br />****<br />****<br />****<br />****<br />****<br />****<br />****<br />****<br />
+		<h3>Listener JSF</h3>
+details du compte : <h:selectOneMenu
+			value="#{operationMBean.numCmpt}" valueChangeListener="#{operationMBean.onChangementCompteSelectionne}"
+			>
+			<!-- onchange="submit()"  pour version sans ajax -->
+			<f:ajax event="change" render="listeOperation"/>
+			<f:selectItems value="#{clientMBean.comptes}" var="compte"
+				itemValue="#{compte.numero}" itemLabel="#{compte.label}" />
+		</h:selectOneMenu>
+		<br />
+		<h:panelGrid id="listeOperation">
+		<h:dataTable rendered="#{not empty operationMBean.operations}"
+			value="#{operationMBean.operations}" var="o" border="1">
 
 			<h:column>
 				<f:facet name="header">
-					<f:verbatim>numero</f:verbatim>
+					<f:verbatim>label</f:verbatim>
 				</f:facet>
-				<h:outputText value="#{compte.numero}" />
+				<h:outputText value="#{o.label}" />
 			</h:column>
 			<h:column>
-			<f:facet name="header">
-					<f:verbatim>Label</f:verbatim>
-				</f:facet>		
-				<h:outputText value="#{compte.label}" />
-			</h:column>
-			<h:column>
-			<f:facet name="header">
-					<f:verbatim>Solde</f:verbatim>
+				<f:facet name="header">
+					<f:verbatim>Montant</f:verbatim>
 				</f:facet>
-				<h:outputText value="#{compte.solde}" />
+				<h:outputText value="#{o.montant}" />
 			</h:column>
+
 		</h:dataTable>
-
-
+		</h:panelGrid>
+		</h:form>
 	</ui:define>
 </ui:composition>
 

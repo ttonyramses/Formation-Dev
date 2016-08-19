@@ -23,8 +23,13 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	</servlet-mapping>
 
 	<session-config>
-		<session-timeout>2</session-timeout>
+		<session-timeout>10</session-timeout>
 	</session-config>
+
+	<context-param>
+		<param-name>org.apache.myfaces.SERIALIZE_STATE_IN_SESSION</param-name>
+		<param-value>false</param-value>
+	</context-param>
 
 	<error-page>
 		<exception-type>javax.faces.application.ViewExpiredException</exception-type>
