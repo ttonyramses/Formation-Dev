@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<ui:composition template="/templates/common.xhtml">
+	<ui:define name="pageTitle">Espace Client</ui:define>
+	<ui:define name="pageHeader">** Espace Client **</ui:define>
+	<ui:define name="body">
+		<table>
+
+			<tr>
+				<td>Numero</td>
+				<td><h:outputText value="#{clientMBean.client.numero}" /></td>
+			</tr>
+			<tr>
+				<td>Nom</td>
+				<td><h:outputText value="#{clientMBean.client.nom}" /></td>
+			</tr>
+			<tr>
+				<td>Prenom</td>
+				<td><h:outputText value="#{clientMBean.client.prenom}" /></td>
+			</tr>
+			<tr>
+				<td>Adresse</td>
+				<td><h:outputText value="#{clientMBean.client.adresse}" /></td>
+			</tr>
+		</table>
+
+		<h:form>
+			<h:commandButton action="${clientMBean.recupererComptes()}"
+				value="liste Comptes" />
+		</h:form>
+
+		<h:dataTable rendered="#{not empty clientMBean.comptes}"
+			value="#{clientMBean.comptes}" var="compte" border="1">
+
+			<h:column>
+				<f:facet name="header">
+					<f:verbatim>numero</f:verbatim>
+				</f:facet>
+				<h:outputText value="#{compte.numero}" />
+			</h:column>
+			<h:column>
+			<f:facet name="header">
+					<f:verbatim>Label</f:verbatim>
+				</f:facet>		
+				<h:outputText value="#{compte.label}" />
+			</h:column>
+			<h:column>
+			<f:facet name="header">
+					<f:verbatim>Solde</f:verbatim>
+				</f:facet>
+				<h:outputText value="#{compte.solde}" />
+			</h:column>
+		</h:dataTable>
+
+
+	</ui:define>
+</ui:composition>
+
+</html>
