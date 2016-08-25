@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<!-- commentaire -->
+<produit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.afcepf.fr/2016/produit"
+xsi:schemaLocation="http://www.afcepf.fr/2016/produit produit.xsd" num='92'>
+
+	<description> Mon super produit</description>
+	<prix>2499.9s9</prix>
+</produit>

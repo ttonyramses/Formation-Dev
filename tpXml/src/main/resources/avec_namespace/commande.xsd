@@ -1,0 +1,31 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:p="http://www.afcepf.fr/2016/produit"
+	xmlns:c="http://www.afcepf.fr/2016/commande"
+	targetNamespace="http://www.afcepf.fr/2016/commande"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>Schema pour commande</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.afcepf.fr/2016/produit"
+		schemaLocation="produit.xsd"/>
+	<xs:element name='commande' type='c:CommandeType'/>
+	<xs:complexType name="CommandeType">
+		<xs:sequence>
+			<xs:element name="num" type="xs:positiveInteger"
+				maxOccurs='1'/>
+			<xs:element name="date" type="xs:date" maxOccurs='1'/>
+			<xs:element name="produitEnQte" type="c:ProduitEnQte"
+				maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProduitEnQte">
+		<xs:complexContent>
+			<xs:extension base="p:ProduitType">
+				<xs:sequence>
+					<xs:element name="quantite" type="xs:positiveInteger"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

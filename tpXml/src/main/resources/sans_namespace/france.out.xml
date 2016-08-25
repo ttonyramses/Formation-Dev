@@ -1,0 +1,35 @@
+<html>
+<body>
+<h3>....France ...</h3>
+<h5>
+<font color="blue">Haute-Normandie</font>
+</h5>
+<table border="1"> ...
+<tr>
+<td>27</td>
+...
+</tr>
+<tr>
+<td>76</td>
+...
+</tr>
+</table>
+<h5>
+<font color="blue">Picardie</font>
+</h5>
+<table border="1"> ...
+<tr>
+<td>80</td>
+...
+</tr>
+<tr>
+<td>60</td>
+...
+</tr>
+<tr>
+<td>02</td>
+...
+</tr>
+</table>
+</body>
+</html>

@@ -5,11 +5,13 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 
 <f:view>
-			<ui:insert name="pageMetaData"></ui:insert>
+	<ui:insert name="pageMetaData"></ui:insert>
 
 	<!--    		<f:loadBundle basename="resources" var="msg" />
  -->
 	<h:head>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+
 		<title><ui:insert name="pageTitle">Page Title</ui:insert></title>
 		<style type="text/css">
 body {
@@ -33,41 +35,37 @@ body {
 	</h:head>
 
 	<h:body bgcolor="#ffffff">
-		<table style="border: 1px solid #CAD6E0" align="center"
-			cellpadding="0" cellspacing="0" border="0" width="400">
-			<tbody>
+<div class="row">
+		<div class="col-xs-10">
+		<ui:include src="header.xhtml">
+			<ui:param name="appName" value="boutique" />
+		</ui:include>
+		</div>
+		<div class="col-xs-2">AFCEPF</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+		<ui:insert name="pageMenu">
 
-				<tr>
-					<td class="header" height="42" align="center" valign="middle"
-						width="100%" bgcolor="#E4EBEB"><ui:insert name="pageHeader">Page Header</ui:insert>
-
-
-					</td>
-				</tr>
-				<tr>
-					<td height="1" width="100%" bgcolor="#CAD6E0"></td>
-				</tr>
-
-				<tr>
-					<td width="100%" colspan="2">
-						<table width="100%" style="height: 150px" align="left"
-							cellpadding="0" cellspacing="0" border="0">
-							<tbody>
-								<tr>
-									<td align="center" width="100%" valign="middle"><ui:insert
-											name="body">Page Body</ui:insert></td>
-								</tr>
-							</tbody>
-						</table>
-					</td>
-				</tr>
-
-				<tr>
-					<td colspan="2" valign="bottom" height="1" width="100%"
-						bgcolor="#CAD6E0"></td>
-				</tr>
-			</tbody>
-		</table>
+			<ui:include src="menu.xhtml">
+				<ui:param name="appName" value="boutique" />
+			</ui:include>
+		</ui:insert>
+		</div>
+</div>
+<div class="row">
+		<div class="col-xs-2"></div>
+		<div class="col-xs-10">
+		<ui:insert name="body">Page Body</ui:insert>
+		</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+		<ui:include src="footer.xhtml">
+			<ui:param name="" value="" />
+		</ui:include>
+</div>
+</div>
 	</h:body>
 </f:view>
 </html>

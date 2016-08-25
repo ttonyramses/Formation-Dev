@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='commande.xslt' ?>
+<commande xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.afcepf.fr/2016/commande" xsi:schemaLocation="http://www.afcepf.fr/2016/commande commande.xsd">
+	<num>12</num>
+	<date>2016-08-24</date>
+	<produitEnQte num="6">
+		<prix>2500.9</prix>
+		<description>mon produit</description>
+		<quantite>3</quantite>
+	</produitEnQte>
+	<produitEnQte num="7">
+		<prix>200.99</prix>
+		<description>mon produit 2</description>
+		<quantite>3</quantite>
+	</produitEnQte>
+</commande>
