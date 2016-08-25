@@ -1,7 +1,42 @@
-<html>
+<html xmlns:p="http://www.afcepf.fr/2016/produit" xmlns:c="http://www.afcepf.fr/2016/commande">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+					h3 {color :red}
+					th {color :blue}
+					.produit{text-align:center}
+
+				</style>
+</head>
 <body>
-<h3>
-<font color="red"><u>12</u></font>
-</h3>
+<table>
+<tr>
+<td>
+<h3> Commande N&deg; </h3>
+</td><td>
+							:
+						</td><td>12</td>
+</tr>
+<tr>
+<td>
+<h3> Date </h3>
+</td><td>:</td><td>2016-08-24</td>
+</tr>
+</table>
+<hr>
+<u>
+<h3>Produit commande</h3>
+</u>
+<table border="1" class="produit">
+<tr>
+<th>Numero</th><th>Description</th><th>Prix</th><th>Quantite</th>
+</tr>
+<tr>
+<td>6</td><td>mon produit</td><td>2500.9</td><td>3</td>
+</tr>
+<tr>
+<td>7</td><td>mon produit 2</td><td>200.99</td><td>3</td>
+</tr>
+</table>
 </body>
 </html>

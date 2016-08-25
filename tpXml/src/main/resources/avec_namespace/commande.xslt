@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-	<xsl:template match="/commande">
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:c="http://www.afcepf.fr/2016/commande"
+	xmlns:p="http://www.afcepf.fr/2016/produit">
+
+<xsl:template match="/c:commande">
 		<html>
 			<head>
 				<style>
@@ -21,7 +24,7 @@
 							:
 						</td>
 						<td>
-							<xsl:value-of select="num" />
+							<xsl:value-of select="c:num" />
 						</td>
 					</tr>
 					<tr>
@@ -30,7 +33,7 @@
 						</td>
 						<td>:</td>
 						<td>
-							<xsl:value-of select="date" />
+							<xsl:value-of select="c:date" />
 						</td>
 					</tr>
 				</table>
@@ -47,29 +50,29 @@
 						<th>Quantite</th>
 					</tr>
 
-					<!-- <xsl:for-each select="produitEnQte"> <tr> <td ><xsl:value-of select="@num" 
+					<xsl:for-each select="produitEnQte"> <tr> <td ><xsl:value-of select="@num" 
 						/></td> <td><xsl:value-of select="description" /></td> <td><xsl:value-of 
-						select="prix" /></td> <td><xsl:value-of select="quantite" /></td> </tr> </xsl:for-each> -->
-					<xsl:apply-templates select="produitEnQte" />
+						select="prix" /></td> <td><xsl:value-of select="quantite" /></td> </tr> </xsl:for-each>
+					<xsl:apply-templates select="c:produitEnQte" />
 				</table>
 
 
 			</body>
 		</html>
 	</xsl:template>
-	<xsl:template match="produitEnQte">
+	<xsl:template match="c:produitEnQte">
 		<tr>
 			<td>
 				<xsl:value-of select="@num" />
 			</td>
 			<td>
-				<xsl:value-of select="description" />
+				<xsl:value-of select="p:description" />
 			</td>
 			<td>
-				<xsl:value-of select="prix" />
+				<xsl:value-of select="p:prix" />
 			</td>
 			<td>
-				<xsl:value-of select="quantite" />
+				<xsl:value-of select="c:quantite" />
 			</td>
 		</tr>
 	</xsl:template>

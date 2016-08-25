@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<produit xmlns="http://www.afcepf.fr/2016/produit" num="8">
+    <description>Mon nouveau produit</description>
+    <prix>20.99</prix>
+</produit>
