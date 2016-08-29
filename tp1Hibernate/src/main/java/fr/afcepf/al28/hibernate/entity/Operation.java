@@ -1,11 +1,31 @@
 package fr.afcepf.al28.hibernate.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="operation")
 public class Operation {
 
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id", nullable=false)
 	private Integer id;
+	
+	@Column(name="montant", nullable=false)
 	private Double montant;
+	
+	@Column(name="type", nullable=false, length=50)
 	private String type;
+	
+	@ManyToOne
+	@JoinColumn(name="numero_compte")
 	private Compte compte;
 	
 	public Operation() {

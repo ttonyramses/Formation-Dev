@@ -61,7 +61,7 @@ public class TestRequetesAssociation {
 		}finally{
 			try {
 				session.close();
-			} catch (HibernateException e2) {
+			} catch (Exception e2) {
 				log.fatal("probleme lors de l'execution du traitement"+e2.getMessage(),e2);		
 			}
 
