@@ -1,0 +1,13 @@
+package exoSingleton;
+
+public class Test {
+
+	public static void main(String[] args) 
+	{
+
+		MonThread t = new MonThread();
+		t.run();
+
+	}
+
+}

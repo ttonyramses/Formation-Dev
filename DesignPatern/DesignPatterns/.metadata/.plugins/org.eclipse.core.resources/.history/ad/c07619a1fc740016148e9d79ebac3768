@@ -1,0 +1,30 @@
+package exoSingleton;
+
+public class DistributeursTickets {
+
+	private int numeroCourant;
+	
+	public int getNumero()
+	{
+		//numeroCourant++;
+		return numeroCourant++;
+	}
+	
+	private static DistributeursTickets instance;
+	
+	private DistributeursTickets()
+	{
+		System.out.println("Constructeur du distributeur");
+		numeroCourant = 1;		
+	}
+	
+	public static DistributeursTickets getInstance()
+	{
+		if (instance == null)
+		{
+			instance = new DistributeursTickets();
+		}
+		return instance;
+	}
+	
+}

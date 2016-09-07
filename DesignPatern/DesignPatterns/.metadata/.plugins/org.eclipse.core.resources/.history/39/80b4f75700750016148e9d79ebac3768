@@ -1,0 +1,5 @@
+package exoClone.clones;
+
+public abstract class Soldier {
+
+}

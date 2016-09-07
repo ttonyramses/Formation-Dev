@@ -1,0 +1,21 @@
+package fr.afcepf.pronto.factories;
+
+import fr.afcepf.pizzeria.Garniture;
+import fr.afcepf.pizzeria.IPizzaFactory;
+import fr.afcepf.pizzeria.Pate;
+
+public class LondonCheezyFactory implements IPizzaFactory {
+
+	@Override
+	public Pate creerPate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Garniture creerGarniture() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

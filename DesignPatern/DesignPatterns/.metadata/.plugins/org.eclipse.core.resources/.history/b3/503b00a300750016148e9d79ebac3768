@@ -1,0 +1,15 @@
+package exoClone.clones;
+
+public abstract class Soldier {
+
+	private int numeroSerie;
+	private int poids;
+	private int hauteur;
+	private int largeur;
+	
+	@Override
+	public Soldier clone()
+	{
+		return null;
+	}
+}

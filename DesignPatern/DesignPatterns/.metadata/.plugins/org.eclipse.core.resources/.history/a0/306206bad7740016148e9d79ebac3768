@@ -1,0 +1,7 @@
+package fr.afcepf.pronto.garnitures;
+
+import fr.afcepf.pizzeria.Garniture;
+
+public class Hawai extends Garniture {
+
+}

@@ -1,0 +1,21 @@
+package exoSingleton;
+
+public class DistributeursTickets {
+
+	private static DistributeursTickets instance;
+	
+	private DistributeursTickets()
+	{
+				
+	}
+	
+	public static DistributeursTickets getInstance()
+	{
+		if (instance == null)
+		{
+			instance = new DistributeursTickets();
+		}
+		return instance;
+	}
+	
+}
