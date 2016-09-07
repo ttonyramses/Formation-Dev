@@ -1,8 +1,0 @@
-package exoClone.clones;
-
-public class StormTrooper extends Soldier {
-
-	protected int munitions;
-	protected int obeissance;
-	
-}

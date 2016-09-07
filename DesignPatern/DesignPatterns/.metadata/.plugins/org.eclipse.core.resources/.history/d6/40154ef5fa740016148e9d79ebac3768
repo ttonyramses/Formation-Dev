@@ -1,5 +1,0 @@
-package exoSingleton;
-
-public class MonThread extends Thread {
-
-}
