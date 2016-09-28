@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><umlet_diagram><element><type>com.umlet.element.custom.State</type><coordinates><x>20</x><y>0</y><w>610</w><h>620</h></coordinates><panel_attributes>Montre
+--
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+-.</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>180</x><y>510</y><w>210</w><h>70</h></coordinates><panel_attributes>lt=&lt;-
+light</panel_attributes><additional_attributes>20;20;20;50;190;50;190;20</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>180</x><y>426</y><w>210</w><h>84</h></coordinates><panel_attributes>lt=&lt;-
+light</panel_attributes><additional_attributes>190;64;190;34;20;34;20;64</additional_attributes></element><element><type>com.umlet.element.custom.State</type><coordinates><x>340</x><y>490</y><w>99</w><h>40</h></coordinates><panel_attributes>Allumée
+</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.custom.State</type><coordinates><x>120</x><y>490</y><w>99</w><h>40</h></coordinates><panel_attributes>Eeinte
+</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>20</x><y>490</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;20;20;20</additional_attributes></element><element><type>com.umlet.element.custom.InitialState</type><coordinates><x>30</x><y>500</y><w>20</w><h>20</h></coordinates><panel_attributes/><additional_attributes/></element><element><type>com.umlet.element.custom.InitialState</type><coordinates><x>240</x><y>70</y><w>20</w><h>20</h></coordinates><panel_attributes/><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>54</x><y>96</y><w>156</w><h>214</h></coordinates><panel_attributes>lt=&lt;-
+mode</panel_attributes><additional_attributes>136;34;36;34;36;194</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>230</x><y>70</y><w>40</w><h>60</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>20;40;20;20</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>28</x><y>340</y><w>214</w><h>107</h></coordinates><panel_attributes>lt=&lt;-
+ 
+avance / incrémenter minute</panel_attributes><additional_attributes>62;20;62;70;152;70;152;20</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>406</x><y>340</y><w>208</w><h>117</h></coordinates><panel_attributes>lt=&lt;-
+ 
+avance / incrémenter heure</panel_attributes><additional_attributes>54;20;54;80;154;80;154;20</additional_attributes></element><element><type>com.umlet.element.custom.State</type><coordinates><x>30</x><y>290</y><w>200</w><h>70</h></coordinates><panel_attributes>Modification minute
+--
+do : clignoter minutes
+
+
+
+</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.custom.State</type><coordinates><x>390</x><y>290</y><w>210</w><h>70</h></coordinates><panel_attributes>Modification heure
+--
+do : clignoter heures
+</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>210</x><y>296</y><w>200</w><h>54</h></coordinates><panel_attributes>lt=&lt;-
+mode</panel_attributes><additional_attributes>20;34;180;34</additional_attributes></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>310</x><y>96</y><w>176</w><h>214</h></coordinates><panel_attributes>lt=&lt;-
+mode
+</panel_attributes><additional_attributes>140;194;140;34;20;34</additional_attributes></element><element><type>com.umlet.element.custom.State</type><coordinates><x>190</x><y>110</y><w>140</w><h>50</h></coordinates><panel_attributes>Affichage Heure
+</panel_attributes><additional_attributes/></element></umlet_diagram>
