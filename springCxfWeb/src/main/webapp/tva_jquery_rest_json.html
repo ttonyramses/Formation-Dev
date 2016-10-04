@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<script src="jquery-2.2.1.js"></script>
+<script>  
+      $(function() {
+
+    	  $('#btnCalcul').on('click',function(){
+	 	 
+	    $.ajax({
+           type: "GET",
+           url: "services/rest/tva/calcul?ht="+$('#txtHt').val()+"&tauxPct="+$('#txtTaux').val(),
+		   success: function (data,status,xhr) {
+			   if (data) {
+			      console.log(data);
+				   $("#spanTva").html( data.tva) ;
+				   $("#spanTtc").html( data.ttc) ;
+
+               } else {
+                   $("#spanTva").html("Cannot GET devises !");
+               }
+           }
+		   });
+    	  });
+
+       	  $('#btnNouveauTaux').on('click',function(){
+
+      	 	 var tauxTvaJsObj = {nom:"", taux : 0.0};
+       	 	tauxTvaJsObj.nom=$('#txtNomTaux').val();
+      	 	tauxTvaJsObj.taux=$('#txtValeurTaux').val();
+      	 	
+      	    $.ajax({
+                 type: "POST",
+                 url: "services/rest/tva/taux",
+                    contentType : "application/json; charset=utf-8",
+                    data:JSON.stringify(tauxTvaJsObj),
+                    dataType: "json",
+      		   success: function (data,status,xhr) {
+      			   if (data) {
+      			      console.log(data);
+      				   $("#spanRes").html( "tauxTva bien ajouté : "+JSON.stringify(data)) ;
+      				   $("#spanRes").html( data.ttc) ;
+
+                     } else {
+                         $("#spanRes").html("Cannot GET taux !");
+                     }
+                 }
+      		   });
+          	  })
+          	  
+      }); 
+   </script>
+</head>
+<body>
+
+	<h3>
+		JSON tests for Tva app (REST/JSON via spring)
+		<h3>
+
+			<hr />
+			<hr />
+			ht : <input id="txtHt" type='text' /><br /> 
+			taux (en %) : <input id="txtTaux" type='text' /><br /> 
+			ttc : <span id="spanTtc"></span> <br />
+			tva : <span id="spanTva"></span> <br />
+			<input type='button' value="calculer tva" id="btnCalcul" /> <br />
+			<hr/>
+			
+			Nom taux (en %) : <input id="txtNomTaux" type='text' /><br /> 
+			taux (en %) : <input id="txtValeurTaux" type='text' /><br /> 
+			<input type='button' value="calculer tva" id="btnNouveauTaux" /> <br />
+			Resultat : <span id="spanRes"></span> <br />
+			
+
+</body>
+</html>
