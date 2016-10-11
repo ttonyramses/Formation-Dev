@@ -19,6 +19,11 @@ http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
 		address="/tvaService">
 		<!-- <jaxws:inInterceptors> <ref bean="securityInterceptor" /> </jaxws:inInterceptors> -->
 	</jaxws:endpoint>
+	
+	<jaxws:endpoint id="idCalculateur" implementor="#calculateurImpl"
+		address="/calculateur">
+		<!-- <jaxws:inInterceptors> <ref bean="securityInterceptor" /> </jaxws:inInterceptors> -->
+	</jaxws:endpoint>
 
 
 	<!-- nb : par defaut , CXF 2.5 utilise la techno "Jettison" pour le lien 
